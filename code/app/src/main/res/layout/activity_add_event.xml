@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:fillViewport="false">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    tools:context="com.example.leo.krono.eAdders.AddEvent">
+
+    <EditText
+        android:id="@+id/event_title"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Title"
+        android:background="#ffb3b3"
+
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/event_venue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/event_sdate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:background="#ffcccc"
+
+        android:text="Start Date"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/event_edate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/event_stime"
+        app:layout_constraintTop_toBottomOf="@+id/event_desc" />
+
+    <TextView
+        android:id="@+id/event_stime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:layout_gravity="end"
+        android:text="Start Time"
+        android:textColor="#000"
+        android:background="#ffcccc"
+
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/event_etime"
+        app:layout_constraintLeft_toRightOf="@+id/event_sdate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_desc" />
+
+    <TextView
+        android:id="@+id/event_repeat"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="#ffcccc"
+        android:gravity="center"
+
+        android:text="Does not Repeat"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/event_save"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_edate" />
+
+    <Button
+        android:id="@+id/event_save"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="#00cc00"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:text="Save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/event_cancel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/event_cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:background="@color/bpRed"
+        android:text="Cancel"
+        android:textColor="#FFF"
+        app:layout_constraintLeft_toRightOf="@+id/event_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/event_save" />
+
+    <EditText
+        android:id="@+id/event_venue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Venue (Optional)"
+        android:inputType="textPersonName"
+        android:background="#ffcccc"
+
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/event_desc"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_title" />
+
+    <EditText
+        android:id="@+id/event_desc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Notes (Optional)"
+        android:inputType="textPersonName"
+        android:background="#ffb3b3"
+
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/event_sdate"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_venue" />
+
+    <TextView
+        android:id="@+id/event_edate"
+        android:background="#ffb3b3"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="End Date"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/event_repeat"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/event_etime"
+        app:layout_constraintTop_toBottomOf="@+id/event_sdate" />
+
+    <TextView
+        android:id="@+id/event_etime"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="End Time"
+        android:background="#ffb3b3"
+
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/event_repeat"
+        app:layout_constraintLeft_toRightOf="@+id/event_edate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_stime" />
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

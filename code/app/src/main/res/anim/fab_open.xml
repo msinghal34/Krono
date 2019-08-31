@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+<!--Opening of floating action button with the animations-->
+<!--Size of the buttons reduces from 0.0 to 0.8-->
+<!--Duration of the animation is 300ms-->
+<!--Animation will start from the center as refelected in pivotX and pivotY-->
+<!--Interpolator is linear, i.e., rate of change of the animation will be linear-->
+    <scale
+        android:duration="300"
+        android:fromXScale="0.0"
+        android:fromYScale="0.0"
+        android:toXScale="0.8"
+        android:toYScale="0.8"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        />
+<!--Here the interpolator is accelerated-->
+    <alpha
+        android:duration="300"
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"
+        android:interpolator="@android:anim/accelerate_interpolator"
+        />
+</set>

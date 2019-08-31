@@ -1,0 +1,32 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:defaultValue="15"
+        android:title="Class"
+
+        android:inputType="number"
+        android:key="minute_classe"/>
+    <EditTextPreference
+
+        android:defaultValue="30"
+        android:title="Exam"
+        android:inputType="number"
+        android:key="minute_exam"/>
+    <EditTextPreference
+        android:defaultValue="15"
+        android:title="Tutorial"
+
+        android:inputType="number"
+        android:key="minute_tutorial"/>
+    <EditTextPreference
+        android:defaultValue="20"
+
+        android:title="Lab"
+        android:inputType="number"
+        android:key="minute_lab"/>
+    <EditTextPreference
+        android:defaultValue="20"
+
+        android:title="Event"
+        android:inputType="number"
+        android:key="minute_event"/>
+</PreferenceScreen>

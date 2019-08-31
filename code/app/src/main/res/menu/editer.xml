@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/edit_discard"
+        android:title="Discard"
+        android:icon="@mipmap/ic_cancel"
+        app:showAsAction="always"/>
+    <item android:id="@+id/edit_save"
+        android:title="Save"
+        android:icon="@mipmap/ic_save"
+        app:showAsAction="always"/>
+
+</menu>

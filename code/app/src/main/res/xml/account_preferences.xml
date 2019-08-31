@@ -1,0 +1,15 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Settings" />
+
+    <PreferenceScreen
+        android:key="goToPreferences"
+        android:title="Configure Krono">
+
+        <!-- package relative class name -->
+        <intent
+            android:action="org.sufficientlysecure.localcalendar.settings.MAIN"
+            android:targetClass=".ui.MainActivity" />
+    </PreferenceScreen>
+
+</PreferenceScreen>

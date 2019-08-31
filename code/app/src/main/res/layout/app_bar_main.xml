@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leo.krono.activities.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.neelesh.test_app.MainActivity">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="12dp"
+            android:clickable="true"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_action_fab_plus"
+            android:layout_marginEnd="12dp" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_reminders"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/fab_reminders"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/fab_plus"
+            app:layout_constraintLeft_toLeftOf="@+id/fab_plus"
+            app:layout_constraintRight_toRightOf="@+id/fab_plus"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_action_reminders" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_events"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
+            android:clickable="true"
+            android:visibility="invisible"
+            app:backgroundTint="@color/fab_events"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/fab_reminders"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="@+id/fab_reminders"
+            app:layout_constraintRight_toRightOf="@+id/fab_reminders"
+            app:pressedTranslationZ="12dp"
+            app:srcCompat="@drawable/ic_action_events" />
+
+        <TextView
+            android:id="@+id/rem_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginBottom="21dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_vertical|end"
+            android:text="Reminders"
+            android:padding="4dp"
+            android:background="@color/white"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/fab_plus"
+            app:layout_constraintRight_toLeftOf="@+id/fab_reminders" />
+
+        <TextView
+            android:id="@+id/events_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginBottom="77dp"
+            android:layout_marginRight="8dp"
+            android:background="@color/white"
+            android:gravity="center_vertical|end"
+            android:padding="4dp"
+            android:text="Events"
+            android:textSize="16sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/fab_plus"
+            app:layout_constraintRight_toLeftOf="@+id/fab_events" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

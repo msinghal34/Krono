@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:agendaCalendar="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/app_bar_main"
+    tools:context="com.example.leo.krono.activities.MainActivity">
+
+    <com.github.tibolte.agendacalendarview.AgendaCalendarView
+        android:id="@+id/agenda_calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        agendaCalendar:agendaCurrentDayTextColor="#ff1a1a"
+        agendaCalendar:calendarColor="#ffe6e6"
+        agendaCalendar:calendarCurrentDayTextColor="#ff1a1a"
+        agendaCalendar:calendarDayTextColor="#00cc00"
+        agendaCalendar:calendarHeaderColor="#2929a3"
+        agendaCalendar:calendarPastDayTextColor="#808080"
+        />
+</LinearLayout>

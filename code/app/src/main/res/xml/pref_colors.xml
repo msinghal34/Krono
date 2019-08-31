@@ -1,0 +1,92 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/classes"
+        android:key="color_classe"
+        android:title="Class"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="6"
+        app:showDialog="true" />
+
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/exams"
+        android:key="color_exam"
+        android:title="Exam"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="6"
+        app:showDialog="true" />
+
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/events"
+        android:key="color_event"
+        android:title="Event"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="6"
+        app:showDialog="true" />
+
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/deadlines"
+        android:key="color_deadline"
+        android:title="Deadline"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="6"
+        app:showDialog="true" />
+
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/reminders"
+        android:key="color_reminder"
+        android:title="Reminder"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="6"
+        app:showDialog="true" />
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/labs"
+        android:key="color_lab"
+        android:title="Lab"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="6"
+        app:showDialog="true" />
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/tutorials"
+        android:key="color_tutorial"
+        android:title="Tutorial"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="6"
+        app:showDialog="true" />
+    <com.kizitonwose.colorpreference.ColorPreference
+        android:defaultValue="@color/holidays"
+        android:key="color_holiday"
+        android:title="Holiday"
+        app:colorShape="circle"
+        app:colorChoices="@array/color_choices"
+        app:viewSize="large"
+        app:numColumns="5"
+        app:showDialog="true" />
+    <Preference
+        android:title="Update"
+        android:summary="Click here to update the colors!">
+
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.example.leo.krono"
+            android:targetClass="com.example.leo.krono.misc.UpdateActivity"
+            />
+
+    </Preference>
+</PreferenceScreen>

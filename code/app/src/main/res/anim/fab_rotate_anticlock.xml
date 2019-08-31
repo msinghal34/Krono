@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true">
+<!--Anticlock-wise rotation of the logo of floating action button-->
+<!-- Will be rotated from 45 to 0 degrees-->
+<!--Interpolator is linear and animation will start from the center-->
+    <rotate
+        android:duration="300"
+        android:fromDegrees="45"
+        android:toDegrees="0"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        />
+
+</set>

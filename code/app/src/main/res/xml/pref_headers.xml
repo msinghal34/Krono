@@ -1,0 +1,16 @@
+<preference-headers xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <header
+        android:fragment="com.example.leo.krono.activities.SettingsActivity$AlertPreferenceFragment"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="Alert times" />
+    <header
+        android:fragment="com.example.leo.krono.activities.SettingsActivity$ColorPreferenceFragment"
+        android:icon="@drawable/ic_color_lens_black_24dp"
+        android:title="Calendar colors"/>
+    <header
+        android:fragment="com.example.leo.krono.activities.SettingsActivity$MutePreferenceFragment"
+        android:icon="@drawable/ic_volume_mute_black_24dp"
+        android:title="Muting preferences"/>
+
+</preference-headers>

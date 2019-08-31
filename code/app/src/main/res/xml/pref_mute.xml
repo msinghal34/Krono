@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="mute_toggle"
+        android:title="Enable muting behaviour"/>
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="mute_class"
+        android:dependency="mute_toggle"
+        android:title="Mute during Classes"/>
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="mute_tutorial"
+        android:dependency="mute_toggle"
+        android:title="Mute during Tutorials"/>
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="mute_lab"
+        android:dependency="mute_toggle"
+        android:title="Mute during Labs"/>
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="mute_exam"
+        android:dependency="mute_toggle"
+        android:title="Mute during Exams"/>
+</PreferenceScreen>

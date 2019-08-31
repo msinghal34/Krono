@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/subProject/AgendaCalendarView/AgendaCalendarView.iml" filepath="$PROJECT_DIR$/subProject/AgendaCalendarView/AgendaCalendarView.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Krono.iml" filepath="$PROJECT_DIR$/Krono.iml" />
+      <module fileurl="file://$PROJECT_DIR$/subProject/AgendaCalendarView/agendacalendarview/agendacalendarview.iml" filepath="$PROJECT_DIR$/subProject/AgendaCalendarView/agendacalendarview/agendacalendarview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/subProject/subProject.iml" filepath="$PROJECT_DIR$/subProject/subProject.iml" />
+    </modules>
+  </component>
+</project>

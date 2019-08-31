@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.leo.krono">
+
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_appico"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_appico"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.InstiEvents"
+            android:label="@string/title_activity_insti_events"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.leo.krono.activities.MainActivity" />
+        </activity>
+        <!-- service for accounts on Android < 4.1 -->
+        <service
+            android:name=".misc.AccountAuthenticatorService"
+            android:exported="true"
+            android:process=":auth"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <activity android:name=".misc.AddCalAct" />
+        <activity
+            android:name=".activities.WeekView"
+            android:label="Week" />
+        <activity
+            android:name=".eAdders.ReminderActivity"
+            android:label="New Reminder"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".eAdders.AddDeadline"
+            android:label="New Deadline"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".eAdders.AddExam"
+            android:label="New Exam"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".eAdders.AddEvent"
+            android:label="New Event"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".misc.UpdateActivity" />
+        <activity android:name=".activities.SearchCourse" />
+        <activity
+            android:name=".eAdders.AddWeekly"
+            android:label="New Weekly"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.ViewEvent"
+            android:label="@string/title_activity_view_event"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".mService.MuteService" />
+
+        <receiver android:name=".mService.MuteService$StartServiceReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.PROVIDER_CHANGED" />
+
+                <data android:scheme="content" />
+                <data android:host="com.android.calendar" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activities.EditEvent"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/title_activity_edit_event"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.HelpActivity"
+            android:label="FAQs"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activities.AboutActivity"
+            android:label="About" />
+        <activity android:name=".activities.IntroActivity"/>
+    </application>
+
+</manifest>

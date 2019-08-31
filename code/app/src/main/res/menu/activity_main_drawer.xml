@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_week"
+            android:icon="@drawable/ic_menu_week"
+            android:title="@string/week"
+            android:onClick="showWeekView"/>
+    </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_course"
+            android:icon="@mipmap/ic_course"
+            android:title="Add Course"
+            android:onClick="showCourses"/>
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_settings"
+            android:title="@string/settings"
+            android:onClick="showSettings"/>
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_menu_help"
+            android:title="@string/help"
+            android:onClick="showHelp"/>
+    </group>
+</menu>

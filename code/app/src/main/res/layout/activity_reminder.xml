@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp"
+    android:fillViewport="false">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leo.krono.eAdders.ReminderActivity">
+
+    <EditText
+        android:id="@+id/reminder_desc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffb3b3"
+
+        android:ems="10"
+        android:hint="Remind me to..."
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/reminder_notes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/reminder_date"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffb3b3"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="Date"
+        android:textAllCaps="false"
+
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/reminder_time"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_notes" />
+
+    <TextView
+        android:id="@+id/reminder_time"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_gravity="end"
+        android:background="#ffcccc"
+        android:gravity="center"
+        android:text="Time"
+        android:textColor="#000"
+
+        android:textSize="18sp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_date"
+        app:layout_constraintBottom_toTopOf="@+id/reminder_repeat" />
+
+    <TextView
+        android:id="@+id/reminder_repeat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffb3b3"
+        android:gravity="center"
+        android:text="Does not Repeat"
+        android:textColor="#000"
+        android:textSize="18sp"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_time"
+        android:layout_marginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/reminder_save" />
+
+    <Button
+        android:id="@+id/reminder_save"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#00cc00"
+
+        android:text="Save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/reminder_cancel"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="256dp" />
+
+    <Button
+        android:id="@+id/reminder_cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/bpRed"
+        android:text="Cancel"
+        android:textColor="#FFF"
+        app:layout_constraintLeft_toRightOf="@+id/reminder_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/reminder_save" />
+
+    <EditText
+        android:id="@+id/reminder_notes"
+        android:layout_width="0dp"
+
+        android:layout_height="0dp"
+        android:background="#ffcccc"
+        android:ems="10"
+        android:hint="Notes (Optional)"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/reminder_date"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/reminder_desc" />
+</android.support.constraint.ConstraintLayout>
+    </ScrollView>

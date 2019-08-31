@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:fillViewport="false">
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leo.krono.eAdders.AddWeekly">
+
+    <EditText
+        android:id="@+id/weekly_desc"
+        android:background="#ffb3b3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/weekly_venue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/weekly_save"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:background="#00cc00"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/weekly_cancel"
+        android:layout_marginTop="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/wday4" />
+
+    <Button
+        android:id="@+id/weekly_cancel"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:background="@color/bpRed"
+        android:text="Cancel"
+        android:textColor="#FFF"
+        app:layout_constraintLeft_toRightOf="@+id/weekly_save"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weekly_save" />
+
+    <EditText
+        android:id="@+id/weekly_venue"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:ems="10"
+        android:background="#ffcccc"
+        android:hint="Venue (Optional)"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/weekly_notes"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weekly_desc" />
+
+    <EditText
+        android:id="@+id/weekly_notes"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#ffb3b3"
+        android:ems="10"
+        android:hint="Notes (Optional)"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/weekly_start"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weekly_venue" />
+
+    <CheckBox
+        android:id="@+id/check1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:onClick="onCheckboxClicked"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/wday1"
+        app:layout_constraintTop_toBottomOf="@+id/weekly_start" />
+
+    <Spinner
+        android:id="@+id/wday1"
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:entries="@array/weekdays"
+        android:background="#ffb3b3"
+
+        app:layout_constraintLeft_toRightOf="@+id/check1"
+        app:layout_constraintRight_toLeftOf="@+id/start1"
+        app:layout_constraintTop_toBottomOf="@+id/weekly_start" />
+
+    <TextView
+        android:id="@+id/start1"
+        android:background="#ffcccc"
+
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:onClick="onClickText"
+
+        android:text="Start"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/wday1"
+        app:layout_constraintRight_toLeftOf="@+id/end1"
+        app:layout_constraintTop_toBottomOf="@+id/weekly_start" />
+
+    <TextView
+        android:id="@+id/end1"
+        android:background="#ffb3b3"
+
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:onClick="onClickText"
+
+        android:text="End"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/start1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start1" />
+    <CheckBox
+
+        android:id="@+id/check2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        app:layout_constraintRight_toLeftOf="@+id/wday2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/check1" />
+
+
+    <Spinner
+        android:id="@+id/wday2"
+        android:background="#ffcccc"
+
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:entries="@array/weekdays"
+        app:layout_constraintLeft_toRightOf="@+id/check2"
+        app:layout_constraintRight_toLeftOf="@+id/start2"
+        app:layout_constraintTop_toBottomOf="@+id/wday1" />
+
+    <TextView
+        android:id="@+id/start2"
+        android:layout_width="0dp"
+
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:onClick="onClickText"
+        android:text="Start"
+        android:textColor="#000"
+        android:background="#ffb3b3"
+
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/wday2"
+        app:layout_constraintRight_toLeftOf="@+id/end2"
+        app:layout_constraintTop_toBottomOf="@+id/start1" />
+
+    <TextView
+        android:id="@+id/end2"
+        android:background="#ffcccc"
+
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+
+        android:onClick="onClickText"
+        android:text="End"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/start2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start2" />
+
+
+    <TextView
+        android:id="@+id/weekly_start"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+
+        android:background="#ffcccc"
+        android:layout_marginTop="132dp"
+        android:onClick="onClickTextDate"
+        android:text="Start Date"
+        android:gravity="center"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/weekly_end"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/weekly_end"
+        android:layout_width="0dp"
+        android:layout_height="42dp"
+        android:background="#ffcccc"
+        android:layout_gravity="end"
+        android:gravity="center"
+        android:onClick="onClickTextDate"
+        android:text="End Date"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/weekly_start"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/weekly_start" />
+    <CheckBox
+
+        android:id="@+id/check3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        app:layout_constraintRight_toLeftOf="@+id/wday3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="3dp"
+        app:layout_constraintTop_toBottomOf="@+id/check2" />
+
+    <Spinner
+        android:id="@+id/wday3"
+        android:layout_width="90dp"
+        android:background="#ffb3b3"
+
+        android:layout_height="35dp"
+        android:entries="@array/weekdays"
+        app:layout_constraintLeft_toRightOf="@+id/check3"
+        app:layout_constraintRight_toLeftOf="@+id/start3"
+        app:layout_constraintTop_toBottomOf="@+id/wday2" />
+
+    <TextView
+        android:id="@+id/start3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:onClick="onClickText"
+        android:background="#ffcccc"
+
+        android:text="Start"
+        android:textColor="#000"
+
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/wday3"
+        app:layout_constraintRight_toLeftOf="@+id/end3"
+        app:layout_constraintTop_toBottomOf="@+id/start2" />
+
+    <TextView
+        android:id="@+id/end3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="#ffb3b3"
+
+        android:gravity="center"
+        android:onClick="onClickText"
+
+        android:text="End"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/start3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start3" />
+    <CheckBox
+
+        android:id="@+id/check4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onCheckboxClicked"
+        app:layout_constraintRight_toLeftOf="@+id/wday4"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="2dp"
+        app:layout_constraintTop_toBottomOf="@+id/check3" />
+
+    <Spinner
+        android:id="@+id/wday4"
+        android:background="#ffcccc"
+
+        android:layout_width="90dp"
+        android:layout_height="35dp"
+        android:entries="@array/weekdays"
+        app:layout_constraintLeft_toRightOf="@+id/check4"
+        app:layout_constraintRight_toLeftOf="@+id/start4"
+        app:layout_constraintTop_toBottomOf="@+id/wday3" />
+
+    <TextView
+        android:id="@+id/start4"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:background="#ffb3b3"
+        android:onClick="onClickText"
+        android:text="Start"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/wday4"
+        app:layout_constraintRight_toLeftOf="@+id/end4"
+        app:layout_constraintTop_toBottomOf="@+id/start3" />
+
+    <TextView
+        android:id="@+id/end4"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:background="#ffcccc"
+
+        android:gravity="center"
+
+        android:onClick="onClickText"
+        android:text="End"
+        android:textColor="#000"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toRightOf="@+id/start4"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/start4" />
+
+
+</android.support.constraint.ConstraintLayout>
+    </ScrollView>
